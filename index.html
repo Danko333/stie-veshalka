@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="ru-RU">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=480">
+
+    <meta name="description"
+        content="Чудо-вешалка 5 в 1. Вешалка-трансформер, которая подойдет для брюк, джинсов, футболок, юбок и тд. Решит проблему бардака в шкафу и нехватки места.">
+
+    <script defer type="text/javascript" async="" src="js/events.js"></script>
+    <script src="js/jquery.min.js"></script>
+
+    <title>Чудо-вешалка 5 в 1 - система хранения вещей</title>
+
+    <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
+
+    <link rel="stylesheet" type="text/css" href="css/A.reset.css.pagespeed.cf.IuvT8O7xZR.css">
+    <link rel="stylesheet" type="text/css" href="css/A.OpenSans.css.pagespeed.cf.JfhRCkT8Fo.css">
+    <link rel="stylesheet" type="text/css" href="css/A.owl.carousel.min.css.pagespeed.cf.B_IvocyXz_.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+
+    <script src="https://unpkg.com/imask"></script>
+    <script defer src="js/date.min.js"></script>
+</head>
+
+<body>
+
+    <div class="main_wrapper">
+
+        <!-- Блок предложение -->
+        <header class="offer_section">
+            <div class="title_block">
+                <h1 class="main_title">Чудо-вешалка 5 в 1</h1>
+                <p class="subtitle">умное хранение вещей</p>
+            </div>
+            <div class="image_block">
+                <img class="image" src="images/offer_top.jpg" alt="Чудо-вешалка 5 в 1">
+                <div class="discount">Скидка <b>-50%</b></div>
+            </div>
+            <ul class="benefits_list">
+                <li>Экономит до 70% места в шкафу</li>
+                <li>Суперпрочная</li>
+                <li>Органайзер 5 в 1!</li>
+                <li>Идеальный порядок в шкафу надолго</li>
+            </ul>
+            <div class="price_block clearfix">
+                <div class="price_item old">
+                    <div class="text">Обычная цена:</div>
+                    <div class="value"><x-oldprice>50</x-oldprice> <x-currency>BYN</x-currency></div>
+                </div>
+                <div class="price_item new">
+                    <div class="text">Цена по акции:</div>
+                    <div class="value" style="position: relative"><x-newprice>24.99</x-newprice>
+                        <x-currency>BYN</x-currency>
+                    </div>
+                </div>
+            </div>
+            <!-- Блок предложение -->
+
+
+            <!-- Блок дата акции -->
+            <center>
+                <p style="color: #222; margin: 15px 0;">Акция действует <b>с <date class="date_1"></date> по <date
+                            class="date_2">
+                        </date></b></p>
+            </center>
+
+            <script defer>
+                $(document).ready(function () {
+
+                    date = Date.today().addDays(-3);
+                    date_2 = Date.today();
+
+                    date = date.toString('dd.MM.yyyy');
+                    date_2 = date_2.toString('dd.MM.yyyy');
+
+
+                    $('.date_1').html(date);
+                    $('.date_2').html(date_2);
+                });
+            </script>
+            <!-- Блок дата акции -->
+
+
+            <!-- Блок оформление заказа -->
+            <div class="order_block" id="order_block1">
+                <form id="order_form1" class="order_form" action="send.php" method="post"
+                    onsubmit="return formsubmit(this);">
+                    <input class="input" type="text" name="name" placeholder="Ваше имя" required
+                        oninput="validateInput(this)">
+                    <input class="input phone" type="tel" name="phone" placeholder="+375(00)000-00-00" />
+                    <button class="button">Купить сейчас</button>
+                </form>
+
+                <div class="products_count">
+                    Количество товара по акции: <b>17</b> шт.
+                </div>
+            </div>
+            <!-- Блок оформление заказа -->
+
+
+            <!-- Скрипт маски для ввода -->
+            <script defer>
+                function validateInput(input) {
+                    input.value = input.value.replace(/[^A-Za-zА-Яа-яЁё]/g, '');
+                }
+
+                var element1 = document.querySelector('.phone'); // выбираем первый элемент с классом phone
+                var maskOptions1 = {
+                    mask: '+375(00)000-00-00',
+                    lazy: false
+                };
+                var mask1 = new IMask(element1, maskOptions1);
+
+                function formsubmit(form) {
+                    if (form.name.value == '') {
+                        alert('Введите Ваше Имя!');
+                        return false;
+                    }
+                    if (form.phone.value == '') {
+                        alert('Введите Ваш номер телефона!');
+                        return false;
+                    }
+
+                    if (form.phone.value.includes('_')) {
+                        Swal.fire({
+                            icon: 'error',
+                            title: 'Ошибка!',
+                            text: 'Неверный формат номера телефона. Пожалуйста, заполните все цифры.',
+                        });
+                        return false;
+                    }
+
+                    return true;
+                }
+            </script>
+            <!-- Скрипт маски для ввода -->
+            
+        </header>
+
+
+        <!-- Блок описание 1 -->
+        <section class="benefits1_section">
+            <h2>
+                <small>Скажи «ДА»</small>
+                <b>порядку в шкафу!</b>
+            </h2>
+            <div class="benefits1_list">
+                <div class="benefit_item">
+                    <img src="images/benefits1_image1.jpg" alt="Чудо-вешалка 5 в 1">
+                    <h4>Вещи выглядят смятыми</h4>
+                </div>
+                <div class="benefit_item">
+                    <img src="images/benefits1_image2.jpg" alt="Чудо-вешалка 5 в 1">
+                    <h4>Одежда висит аккуратно и не мнется</h4>
+                </div>
+                <div class="benefit_item">
+                    <img src="images/benefits1_image3.jpg" alt="Чудо-вешалка 5 в 1">
+                    <h4>Одежда не помещается в шкаф</h4>
+                </div>
+                <div class="benefit_item">
+                    <img src="images/benefits1_image4.jpg" alt="Чудо-вешалка 5 в 1">
+                    <h4>В шкафу остается много свободного места</h4>
+                </div>
+                <div class="benefit_item">
+                    <img src="images/benefits1_image5.jpg" alt="Чудо-вешалка 5 в 1">
+                    <h4>Вещи разбросаны везде</h4>
+                </div>
+                <div class="benefit_item">
+                    <img src="images/benefits1_image6.jpg" alt="Чудо-вешалка 5 в 1">
+                    <h4>Все аккуратно сложено в одном месте</h4>
+                </div>
+            </div>
+        </section>
+        <!-- Блок описание + преимущества 1 -->
+
+
+        <!-- Блок описание + преимущества 2 -->
+        <section class="description_section">
+            <h2>
+                <small>Вам точно понравится</small>
+                <b>Чудо-вешалка 5 в 1!</b>
+            </h2>
+            <img class="image" src="images/description_image.jpg" alt="Чудо-вешалка 5 в 1">
+            <div class="text_block">
+                <p> Любите красиво одеваться? Или у вас много родственников? Тогда, наверное, у вас бывает проблема с
+                    местом для одежды. Где вы ее храните? В переполненном шкафу, комодах или на полках? Теперь вам не
+                    придется искать место для своих вещей!</p>
+                <img class="image" src="images/502.jpg" alt="Чудо-вешалка 5 в 1">
+                <br>
+                <p>Эта вешалка реально очень удобная. Она позволяет разместить кучу одежды в небольшом шкафу. Важно, что
+                    все вещи будут аккуратно повешены, и вам не придется тратить много времени на поиск нужной.</p>
+            </div>
+            <div class="button_block">
+                <a href="#order_block1" class="button">Заказать сейчас</a>
+            </div>
+        </section>
+        <!-- Блок описание + преимущества 2 -->
+
+
+        <!-- Блок описание + преимущества 3 -->
+        <section class="benefits2_section dark_theme">
+            <h2>
+                <small>Чудо-вешалка 5 в 1 освободит</small>
+                <b>место в шкафу</b>
+            </h2>
+            <div class="benefits2_list va_middle">
+                <div class="benefit_item">
+                    <div class="image_block">
+                        <img src="images/benefits2_image1.jpg" alt="Чудо-вешалка 5 в 1">
+                    </div>
+                    <div class="text_block">
+                        <h4>Универсальность</h4>
+                        <p>
+                            Универсальная система хранения, которая более чем в 3 раза
+                            увеличит пространство вашего шкафа
+                        </p>
+                    </div>
+                </div>
+                <div class="benefit_item">
+                    <div class="image_block">
+                        <img src="images/benefits2_image2.jpg" alt="Чудо-вешалка 5 в 1">
+                    </div>
+                    <div class="text_block">
+                        <h4>Удобно</h4>
+                        <p>
+                            Вам не придется увозить на дачу объемную зимнюю одежду, чтобы
+                            освободить место для летней
+                        </p>
+                    </div>
+                </div>
+                <div class="benefit_item">
+                    <div class="image_block">
+                        <img src="images/benefits2_image3.jpg" alt="Чудо-вешалка 5 в 1">
+                    </div>
+                    <div class="text_block">
+                        <h4>Практичность</h4>
+                        <p>
+                            Вы сможете все разместить компактно и аккуратно, ничего не
+                            помнется
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Блок описание + преимущества 3 -->
+
+
+        <!-- Блок инструкция -->
+        <section class="benefits3_section">
+            <h2>
+                <small>Как пользоваться</small>
+                <b>прибором Чудо-вешалка 5 в 1?</b>
+            </h2>
+            <img src="images/gif.gif" alt="">
+            <br>
+            <br>
+            <div class="benefits3_list">
+                <div class="benefit_item">
+                    <div class="number_block">
+                        <div class="number">1</div>
+                    </div>
+                    <div class="text_block">
+                        <p>Повесьте Чудо-вешалку 5 в 1</p>
+                    </div>
+                </div>
+                <div class="benefit_item va_middle">
+                    <div class="number_block">
+                        <div class="number">2</div>
+                    </div>
+                    <div class="text_block">
+                        <p>Пригрузите вашими вещами</p>
+                    </div>
+                </div>
+                <div class="benefit_item va_middle">
+                    <div class="number_block">
+                        <div class="number">3</div>
+                    </div>
+                    <div class="text_block">
+                        <p>Отпустите одну сторону вешалки</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Блок инструкция -->
+
+        <div class="image_block">
+            <img class="image" src="images/image3.jpg" alt="Чудо-вешалка 5 в 1">
+        </div>
+
+
+        <!-- Блок отзывы -->
+        <section class="reviews3_section">
+            <h2 class="title">Отзывы покупателей</h2>
+            <div class="reviews_stats_block">
+                <p><b>98%</b> покупателей рекомендуют этот товар</p>
+                <div class="line"></div>
+            </div>
+            <div class="reviews_list3 owl-carousel">
+                <div class="review_item">
+                    <div class="author_block clearfix">
+                        <img class="avatar" src="images/reviews__review1_avatar6a130.jpg"
+                            alt="ОБУВНОЙ СТЕЛЛАЖ   С ПЫЛЕЗАЩИТНЫМ ЧЕХЛОМ ">
+                        <div class="author_info">
+                            <div class="name">Елена Пинчук</div>
+                            <div class="text">29 лет</div>
+                        </div>
+                    </div>
+                    <div class="text_block">
+                        <img src="images/r1.jpg" alt="Пищевые пакеты на резинке">
+                        <p>Я очень довольна, пакеты выполняют свою функцию, при желании можно помыть и использовать
+                            снова. </p>
+                    </div>
+                </div>
+                <div class="review_item">
+                    <div class="author_block clearfix">
+                        <img class="avatar" src="images/reviews__review2_avatard90b8.jpg"
+                            alt="ОБУВНОЙ СТЕЛЛАЖ   С ПЫЛЕЗАЩИТНЫМ ЧЕХЛОМ ">
+                        <div class="author_info">
+                            <div class="name">Анна Михайлова</div>
+                            <div class="text">33 года</div>
+                        </div>
+                    </div>
+                    <div class="text_block">
+                        <img src="images/r2.jpg" alt="Пищевые пакеты на резинке">
+                        <p>Крепкие, можно использовать неоднократно. Удобно когда продукты или салат горкой, что бы не
+                            обветривались. Не жалею о покупке, и всем рекомендую. </p>
+                    </div>
+                </div>
+                <div class="review_item">
+                    <div class="author_block clearfix">
+                        <img class="avatar" src="images/reviews__review3_avatar23d7b.jpg"
+                            alt="ОБУВНОЙ СТЕЛЛАЖ   С ПЫЛЕЗАЩИТНЫМ ЧЕХЛОМ ">
+                        <div class="author_info">
+                            <div class="name">Наталья Телегина</div>
+                            <div class="text">48 лет</div>
+                        </div>
+                    </div>
+                    <div class="text_block">
+                        <img src="images/r3.jpg" alt="Пищевые пакеты на резинке">
+                        <p>
+                            Доставка очень быстрая. Хорошие пакеты, отличная идея, лучше чем прикрывать продукты пищевой
+                            пленкой.
+                            Прочные, можно использовать не один раз.
+                            Рекомендую! </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Блок отзывы -->
+
+
+        <!-- Блок доставка и оплата -->
+        <section class="order_info1_section">
+            <h2><b>Доставка и оплата</b></h2>
+            <div class="order_info1_list">
+                <div class="info_item">
+                    <div class="image_block">
+                        <img src="images/delivery1_image1.jpg" alt="Чудо-вешалка 5 в 1">
+                    </div>
+                    <div class="text_block">
+                        <h4>Как заказать?</h4>
+                        <p>
+                            Оставьте заявку на нашем сайте. Менеджер свяжется с Вами. Будьте на связи.
+                        </p>
+                    </div>
+                </div>
+                <div class="info_item">
+                    <div class="image_block">
+                        <img src="images/delivery1_image2.jpg" alt="Чудо-вешалка 5 в 1">
+                    </div>
+                    <div class="text_block">
+                        <h4>Доставка</h4>
+                        <p>
+                            Мы отправляем Ваш заказ в любой регион курьером или почтой. При получении
+                            Вы оплачиваете товар наложенным платежом.
+                        </p>
+                    </div>
+                </div>
+                <div class="info_item">
+                    <div class="image_block">
+                        <img src="images/delivery1_image3.jpg" alt="Чудо-вешалка 5 в 1">
+                    </div>
+                    <div class="text_block">
+                        <h4>Гарантии</h4>
+                        <p>
+                            Мы всегда проверяем наш товар перед отправкой и гарантируем 100%
+                            качество.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Блок доставка и оплата -->
+
+
+        <!-- Блок предложения -->
+        <section class="offer_section">
+            <div class="title_block">
+                <h3 class="main_title">Чудо-вешалка 5 в 1</h3>
+                <p class="subtitle">система хранения вещей</p>
+            </div>
+            <div class="image_block">
+                <img class="image" src="images/offer_top.jpg" alt="Чудо-вешалка 5 в 1">
+                <div class="discount">Скидка <b>-50%</b></div>
+            </div>
+            <div class="price_block clearfix">
+                <div class="price_item old">
+                    <div class="text">Обычная цена:</div>
+                    <div class="value"><x-oldprice>50</x-oldprice> <x-currency>BYN</x-currency></div>
+                </div>
+
+                <div class="price_item new">
+                    <div class="text">Цена по акции:</div>
+                    <div class="value" style="position: relative"><x-newprice>24.99</x-newprice>
+                        <x-currency>BYN</x-currency>
+                    </div>
+                </div>
+            </div>
+
+            <center>
+                <p style="color: #222; margin: 15px 0;">Акция действует <b>с <date class="date_1"></date> по <date
+                            class="date_2">
+                        </date></b></p>
+            </center>
+
+        </section>
+        <!-- Блок предложения -->
+
+
+        <!-- Блок для заказа -->
+        <div class="order_block">
+            <form id="order_form2" class="order_form" action="send.php" method="post"
+                onsubmit="return formsubmit(this);">
+                <input class="input" type="text" name="name" placeholder="Ваше имя" required
+                    oninput="validateInput(this)">
+                <input class="input phone" type="tel" name="phone" placeholder="+375(00)000-00-00" />
+                <button class="button">Купить сейчас</button>
+            </form>
+
+            <div class="products_count">
+                Количество товара по акции: <b>17</b> шт.
+            </div>
+        </div>
+
+        <script defer>
+            var elements2 = document.querySelectorAll('input[name="phone"]'); // выбираем все элементы с именем phone
+            elements2.forEach(function (element) {
+                var maskOptions2 = {
+                    mask: '+375(00)000-00-00',
+                    lazy: false
+                };
+                var mask2 = new IMask(element, maskOptions2);
+            });
+        </script>
+        <!-- Блок для заказа -->
+
+
+        <!-- Блок футера -->
+        <style>
+            /* Общие стили для футера */
+            .footer {
+                background-color: #f8f9fa;
+                /* Цвет фона */
+                color: #495057;
+                /* Цвет текста */
+                padding: 40px 20px;
+                /* Внутренние отступы */
+                text-align: center;
+            }
+
+            /* Стили для текста внутри футера */
+            .footer p {
+                margin: 10px 0;
+                font-size: 16px;
+            }
+
+            /* Стили для ссылок внутри футера */
+            .footer a {
+                color: #007bff;
+                text-decoration: none;
+                font-weight: bold;
+            }
+
+            .footer a:hover {
+                text-decoration: underline;
+            }
+        </style>
+
+        <div class="footer">
+            <p style="color: #bb6878">Скидка распространяется на всю территорию Беларуси.</p>
+            <br>
+            <p>График работы: 24/7 тел. <a href="tel:+375293175562">+375 29 317 55 62</a></p>
+            <p>Акция действует на территории Республики Беларусь</p>
+            <br>
+            <p>ИП Степанов П.В. | <a href="mailto:stepanooovv@yandex.by">stepanooovv@yandex.by</a></p>
+            <p>Беларусь, г. Минск, ул. Карла Маркса, 7</p>
+            <p>УНП 276346640</p>
+            <br>
+            <p><a href="policy.html">Политика конфиденциальности</a></p>
+            <p><a href="terms.html">Пользовательское соглашение</a></p>
+            <p><a href="return_policy.html">Условия возврата товара и денежных средств</a></p>
+        </div>
+        <!-- Блок футера -->
+
+    </div>
+
+
+    <!-- scripts -->
+    <script src="js/owl.carousel.min.js.pagespeed.jm.v5TsCuoYug.js"></script>
+    <script src="js/scripts.js.pagespeed.jm.2Zeq_dSkgK.js"></script>
+    <!-- scripts -->
+
+
+    <!-- SweetAlert -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <!-- SweetAlert -->
+
+
+    <!-- POPUP------ -->
+    <script defer>
+        function validateInput(input) {
+            input.value = input.value.replace(/[^A-Za-zА-Яа-яЁё\s]/g, '');
+        }
+
+        function showPopup() {
+            Swal.fire({
+                icon: 'success',
+                title: 'Успех!',
+                text: 'Форма успешно отправлена!',
+                confirmButtonText: 'Ок',
+                position: 'top', // Указываем позицию вверху
+                customClass: {
+                    container: 'top-container' // Добавляем свой класс для стилизации
+                }
+            });
+        }
+
+        function errorPopup(message) {
+            Swal.fire({
+                icon: 'error',
+                title: 'Ошибка!',
+                text: message,
+                position: 'top', // Указываем позицию вверху
+                customClass: {
+                    container: 'top-container' // Добавляем свой класс для стилизации
+                }
+            });
+        }
+
+        function closePopup() {
+            var popup = document.getElementById('popup');
+            popup.style.display = 'none';
+        }
+
+        function formsubmit(form) {
+            if (form.name.value == '') {
+                errorPopup('Введите Ваше Имя!');
+                return false;
+            }
+
+            if (form.phone.value == '') {
+                errorPopup('Введите Ваш номер телефона!');
+                return false;
+            }
+
+            if (form.phone.value.includes('_')) {
+                errorPopup('Неверный формат номера телефона. Пожалуйста, заполните все цифры.');
+                return false;
+            }
+
+            $.ajax({
+                type: "POST",
+                url: "send.php",
+                data: $(form).serialize(),
+                success: function (response) {
+                    showPopup();
+                },
+                error: function (xhr, status, error) {
+                    console.error(xhr.responseText);
+                    errorPopup('Произошла ошибка при отправке формы. Пожалуйста, попробуйте еще раз или свяжитесь с нами.');
+                }
+            });
+
+            return false;
+        }
+    </script>
+
+    <style>
+        .top-container {
+            padding-top: 100px !important;
+        }
+    </style>
+    <!-- POPUP------ -->
+
+</body>
+
+</html>
